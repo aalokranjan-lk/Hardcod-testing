@@ -2,8 +2,8 @@ repos:
   - repo: local
     hooks:
       - id: trufflehog
-        name: TruffleHog Secret Scan
-        entry: trufflehog git file://. --branch HEAD --fail
+        name: TruffleHog Filesystem Secret Scan
+        entry: trufflehog filesystem .
         language: system
         pass_filenames: false
         stages: [commit]
